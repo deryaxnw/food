@@ -30,7 +30,7 @@ interface ProductDetailsProps {
 
 const ProductDetails = ({ product } : ProductDetailsProps) => {
 
-    const { toggleCart} = react.useContext(CartContext)
+    const { toggleCart, addProduct } = react.useContext(CartContext)
 
 
 
@@ -46,6 +46,10 @@ const ProductDetails = ({ product } : ProductDetailsProps) => {
 
 
     const handleAddToCart = () => {
+        addProduct({
+            ...product,
+            quantity: quantity,
+        })
         toggleCart()
     }
 
