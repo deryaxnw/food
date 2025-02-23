@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
+import { currency } from "@/helps/currency";
+
 interface ProductsProps {
     products: Product[]
 }
@@ -19,10 +21,7 @@ const Products = ({products}: ProductsProps) => {
                         <p className="p line-clamp-2 text-sm text-muted-foreground">
                             {product.description}
                         </p>
-                        <p className="pt-3 text-sm font-semibold">{new Intl.NumberFormat("pt-Br", {
-                            style: "currency",
-                            currency: "BRL",
-                        }).format(product.price)}</p>
+                        <p className="pt-3 text-sm font-semibold">{currency(product.price)}</p>
                     </div>
 
 
