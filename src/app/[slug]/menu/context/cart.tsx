@@ -88,9 +88,7 @@ export const CartProvider = ({children} : {children: ReactNode }) => {
                 if (prevProduct.id != productId) {
                     return prevProduct;
                 }
-                    if (prevProduct.quantity === 1){
-                        return prevProduct
-                    }
+                
                     return {...prevProduct, quantity: prevProduct.quantity + 1}
             })
         })
