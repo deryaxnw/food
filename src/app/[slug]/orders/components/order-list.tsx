@@ -38,7 +38,7 @@ interface OrderListProps {
   const getStatusLabel = (status: OrderStatus) => {
     if (status === "FINISHED") return "Finalizado";
     if (status === "IN_PREPARATION") return "Em preparo";
-    if (status === "PENDIG") return "Pendente";
+    if (status === "PENDING") return "Pendente";
     return "";
   }
   
